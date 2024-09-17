@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">EnvCrypt Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .lang-toggle {
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        pre {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        code {
+            font-size: 0.875rem;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" id="nav-title">EnvCrypt</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#features" id="nav-features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#usage" id="nav-usage">Usage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#installation" id="nav-installation">Installation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#api" id="nav-api">API Reference</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link lang-toggle" id="toggleLang">عربي</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- English Content -->
+    <div id="english-content">
+        <h1 class="mt-5" id="header-title">EnvCrypt Library</h1>
+        <p id="description">EnvCrypt is a Python library designed for managing encrypted environment files. It supports multiple encryption methods, including Base64 and AES, and allows for easy switching between different environments.</p>
+
+        <section id="features">
+            <h2 id="features-title">Features</h2>
+            <ul>
+                <li id="feature1">Support for Base64 and AES encryption.</li>
+                <li id="feature2">Environment switching (development, production, etc.).</li>
+                <li id="feature3">File integrity verification via SHA-256 hashing.</li>
+                <li id="feature4">Automatic backups before any changes.</li>
+                <li id="feature5">Easy access and modification of environment variables.</li>
+            </ul>
+        </section>
+
+        <section id="usage">
+            <h2 id="usage-title">Usage</h2>
+            <p id="usage-text">To use EnvCrypt, simply import the library and initialize it:</p>
+            <pre><code id="usage-code">
+from envcrypt import Env
+
+env = Env("path/to/envfile", encryption_method="AES")
+api_key = env.get("API_KEY")
+            </code></pre>
+        </section>
+
+        <section id="installation">
+            <h2 id="installation-title">Installation</h2>
+            <p id="installation-text">To install EnvCrypt, use the following command:</p>
+            <pre><code id="installation-code">
+pip install envcrypt
+            </code></pre>
+        </section>
+
+        <section id="api">
+            <h2 id="api-title">API Reference</h2>
+            <h3 id="api-get-title">get(name)</h3>
+            <p id="api-get-text">Retrieve the value of the specified environment variable.</p>
+            <pre><code id="api-get-code">
+env.get("VARIABLE_NAME")
+            </code></pre>
+
+            <h3 id="api-pop-title">pop(name)</h3>
+            <p id="api-pop-text">Remove the specified environment variable and update the file.</p>
+            <pre><code id="api-pop-code">
+env.pop("VARIABLE_NAME")
+            </code></pre>
+
+            <h3 id="api-setdefault-title">setdefault(name, value)</h3>
+            <p id="api-setdefault-text">Set a default value for the environment variable if it does not exist, and update the file.</p>
+            <pre><code id="api-setdefault-code">
+env.setdefault("VARIABLE_NAME", "default_value")
+            </code></pre>
+
+            <h3 id="api-switch-title">switch_environment(environment_name)</h3>
+            <p id="api-switch-text">Switch the current environment to the specified one.</p>
+            <pre><code id="api-switch-code">
+env.switch_environment("development")
+            </code></pre>
+
+            <h3 id="api-verify-title">verify_integrity()</h3>
+            <p id="api-verify-text">Verify the integrity of the environment file using SHA-256 hash.</p>
+            <pre><code id="api-verify-code">
+env.verify_integrity()
+            </code></pre>
+
+            <h3 id="api-list-title">list_env()</h3>
+            <p id="api-list-text">List all environment variables in the current environment.</p>
+                        <pre><code id="api-list-code">
+env.list_env()
+            </code></pre>
+        </section>
+    </div>
+
+    <!-- Arabic Content -->
+    <div id="arabic-content" class="hidden text-end">
+        <h1 class="mt-5" id="header-title-ar">مكتبة EnvCrypt</h1>
+        <p id="description-ar">EnvCrypt هي مكتبة بايثون مصممة لإدارة ملفات البيئة المشفرة. تدعم طرق تشفير متعددة بما في ذلك Base64 و AES، وتسمح بالتبديل بسهولة بين البيئات المختلفة.</p>
+
+        <section id="features-ar">
+            <h2 id="features-title-ar">الميزات</h2>
+            <ul>
+                <li id="feature1-ar">دعم لتشفير Base64 و AES.</li>
+                <li id="feature2-ar">التبديل بين البيئات (التطوير، الإنتاج، إلخ).</li>
+                <li id="feature3-ar">التحقق من سلامة الملفات عبر هاش SHA-256.</li>
+                <li id="feature4-ar">النسخ الاحتياطي التلقائي قبل أي تعديل.</li>
+                <li id="feature5-ar">الوصول السهل وتعديل المتغيرات البيئية.</li>
+            </ul>
+        </section>
+
+        <section id="usage-ar">
+            <h2 id="usage-title-ar">الاستخدام</h2>
+            <p id="usage-text-ar">لاستخدام EnvCrypt، قم فقط باستيراد المكتبة وتهيئتها:</p>
+            <pre><code id="usage-code-ar">
+from envcrypt import Env
+
+env = Env("path/to/envfile", encryption_method="AES")
+api_key = env.get("API_KEY")
+            </code></pre>
+        </section>
+
+        <section id="installation-ar">
+            <h2 id="installation-title-ar">التثبيت</h2>
+            <p id="installation-text-ar">لتثبيت EnvCrypt، استخدم الأمر التالي:</p>
+            <pre><code id="installation-code-ar">
+pip install envcrypt
+            </code></pre>
+        </section>
+
+        <section id="api-ar">
+            <h2 id="api-title-ar">مرجع API</h2>
+            <h3 id="api-get-title-ar">get(name)</h3>
+            <p id="api-get-text-ar">استرجاع قيمة المتغير البيئي المحدد.</p>
+            <pre><code id="api-get-code-ar">
+env.get("VARIABLE_NAME")
+            </code></pre>
+
+            <h3 id="api-pop-title-ar">pop(name)</h3>
+            <p id="api-pop-text-ar">إزالة المتغير البيئي المحدد وتحديث الملف.</p>
+            <pre><code id="api-pop-code-ar">
+env.pop("VARIABLE_NAME")
+            </code></pre>
+
+            <h3 id="api-setdefault-title-ar">setdefault(name, value)</h3>
+            <p id="api-setdefault-text-ar">تعيين قيمة افتراضية للمتغير البيئي إذا لم يكن موجودًا، وتحديث الملف.</p>
+            <pre><code id="api-setdefault-code-ar">
+env.setdefault("VARIABLE_NAME", "default_value")
+            </code></pre>
+
+            <h3 id="api-switch-title-ar">switch_environment(environment_name)</h3>
+            <p id="api-switch-text-ar">تبديل البيئة الحالية إلى البيئة المحددة.</p>
+            <pre><code id="api-switch-code-ar">
+env.switch_environment("development")
+            </code></pre>
+
+            <h3 id="api-verify-title-ar">verify_integrity()</h3>
+            <p id="api-verify-text-ar">التحقق من سلامة ملف البيئة باستخدام هاش SHA-256.</p>
+            <pre><code id="api-verify-code-ar">
+env.verify_integrity()
+            </code></pre>
+
+            <h3 id="api-list-title-ar">list_env()</h3>
+            <p id="api-list-text-ar">عرض جميع المتغيرات البيئية في البيئة الحالية.</p>
+            <pre><code id="api-list-code-ar">
+env.list_env()
+            </code></pre>
+        </section>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Load selected language from localStorage or default to 'en'
+        const selectedLang = localStorage.getItem('lang') || 'en';
+        loadLanguage(selectedLang);
+
+        $('#toggleLang').click(function () {
+            const currentLang = localStorage.getItem('lang') || 'en';
+            const newLang = currentLang === 'en' ? 'ar' : 'en';
+            localStorage.setItem('lang', newLang);
+            document.querySelector('html').lang = newLang;
+            if(newLang == "ar"){ document.querySelector('body').dir = 'rtl' }else { document.querySelector('body').dir = 'ltr' }
+            loadLanguage(newLang);
+        });
+        
+        function loadLanguage(lang) {
+            $.getJSON('locales.json', function (data) {
+                const strings = data[lang];
+                $('#page-title').text(strings.title);
+                $('#nav-title').text(strings.title);
+                $('#nav-features').text(strings.featurestext);
+                $('#nav-usage').text(strings.usagetext);
+                $('#nav-installation').text(strings.installationtext);
+                $('#nav-api').text(strings.apitext);
+                
+                $('#header-title').text(strings.title);
+                $('#description').text(strings.description);
+                $('#features-title').text(strings.featurestext);
+                $('#usage-text').text(strings.usageText);
+                $('#installation-text').text(strings.installationText);
+                
+                $('#api-get-title').text(strings.apiGet);
+                $('#api-pop-title').text(strings.apiPop);
+                $('#api-setdefault-title').text(strings.apiSetdefault);
+                $('#api-switch-title').text(strings.apiSwitchEnvironment);
+                $('#api-verify-title').text(strings.apiVerifyIntegrity);
+                $('#api-list-title').text(strings.apiListEnv);
+
+                $('#feature1').text(strings.feature1);
+                $('#feature2').text(strings.feature2);
+                $('#feature3').text(strings.feature3);
+                $('#feature4').text(strings.feature4);
+                $('#feature5').text(strings.feature5);
+
+                $('#feature1-ar').text(strings.feature1);
+                $('#feature2-ar').text(strings.feature2);
+                $('#feature3-ar').text(strings.feature3);
+                $('#feature4-ar').text(strings.feature4);
+                $('#feature5-ar').text(strings.feature5);
+
+                $('#usage-code').text(`from envcrypt import Env\n\nenv = Env("path/to/envfile", encryption_method="AES")\napi_key = env.get("API_KEY")`);
+                $('#usage-code-ar').text(`from envcrypt import Env\n\nenv = Env("path/to/envfile", encryption_method="AES")\napi_key = env.get("API_KEY")`);
+                
+                $('#installation-code').text('pip install envcrypt');
+                $('#installation-code-ar').text('pip install envcrypt');
+                
+                $('#api-get-code').text('env.get("VARIABLE_NAME")');
+                $('#api-get-code-ar').text('env.get("VARIABLE_NAME")');
+                
+                $('#api-pop-code').text('env.pop("VARIABLE_NAME")');
+                $('#api-pop-code-ar').text('env.pop("VARIABLE_NAME")');
+                
+                $('#api-setdefault-code').text('env.setdefault("VARIABLE_NAME", "default_value")');
+                $('#api-setdefault-code-ar').text('env.setdefault("VARIABLE_NAME", "default_value")');
+                
+                $('#api-switch-code').text('env.switch_environment("development")');
+                $('#api-switch-code-ar').text('env.switch_environment("development")');
+                
+                $('#api-verify-code').text('env.verify_integrity()');
+                $('#api-verify-code-ar').text('env.verify_integrity()');
+                
+                $('#api-list-code').text('env.list_env()');
+                $('#api-list-code-ar').text('env.list_env()');
+                
+                $('#english-content').toggleClass('hidden', lang === 'ar');
+                $('#arabic-content').toggleClass('hidden', lang === 'en');
+                $('#toggleLang').text(lang === 'en' ? 'عربي' : 'English');
+            });
+        }
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

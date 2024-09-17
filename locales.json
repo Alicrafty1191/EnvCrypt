@@ -1,0 +1,128 @@
+{
+  "en": {
+    "title": "EnvCrypt Library",
+    "apitext": "API",
+    "usagetext": "Usage",
+    "featurestext": "Features",
+    "installationtext": "Installation",
+    "description": "EnvCrypt is a Python library designed for managing encrypted environment files. It supports multiple encryption methods, including Base64 and AES, and allows for easy switching between different environments.",
+    "features": {
+      "title": "Features",
+      "list": [
+        "Support for Base64 and AES encryption.",
+        "Environment switching (development, production, etc.).",
+        "File integrity verification via SHA-256 hashing.",
+        "Automatic backups before any changes.",
+        "In-memory caching for improved performance."
+      ]
+    },
+    "usage": {
+      "title": "Usage",
+      "content": "To use EnvCrypt, simply import the library and initialize it as shown below:",
+      "code": "from envcrypt import Env\n\nenv = Env(\"path/to/envfile\", encryption_method=\"AES\")\napi_key = env.get(\"API_KEY\")"
+    },
+    "installation": {
+      "title": "Installation",
+      "content": "To install EnvCrypt, use the following command:",
+      "code": "pip install envcrypt"
+    },
+    "api": {
+      "title": "API Reference",
+      "methods": {
+        "get": {
+          "title": "get(name)",
+          "description": "Retrieve the value of the specified environment variable.",
+          "code": "env.get(\"VARIABLE_NAME\")"
+        },
+        "pop": {
+          "title": "pop(name)",
+          "description": "Remove the specified environment variable and update the file.",
+          "code": "env.pop(\"VARIABLE_NAME\")"
+        },
+        "setdefault": {
+          "title": "setdefault(name, value)",
+          "description": "Set a default value for the environment variable if it does not exist, and update the file.",
+          "code": "env.setdefault(\"VARIABLE_NAME\", \"default_value\")"
+        },
+        "switch_environment": {
+          "title": "switch_environment(environment_name)",
+          "description": "Switch the current environment to the specified one.",
+          "code": "env.switch_environment(\"development\")"
+        },
+        "verify_integrity": {
+          "title": "verify_integrity()",
+          "description": "Verify the integrity of the environment file using SHA-256 hash.",
+          "code": "env.verify_integrity()"
+        },
+        "list_env": {
+          "title": "list_env()",
+          "description": "List all environment variables in the current environment.",
+          "code": "x = env.list_env()\nprint(x)"
+        }
+      }
+    }
+  },
+  "ar": {
+    "title": "مكتبة EnvCrypt",
+    "apitext": "مرجع API",
+    "usagetext": "الاستخدام",
+    "featurestext": "الميزات",
+    "installationtext": "التثبيت",
+    "description": "EnvCrypt هي مكتبة بايثون مصممة لإدارة ملفات البيئة المشفرة. تدعم طرق تشفير متعددة بما في ذلك Base64 و AES، وتسمح بالتبديل بسهولة بين البيئات المختلفة.",
+    "features": {
+      "title": "الميزات",
+      "list": [
+        "دعم لتشفير Base64 و AES.",
+        "التبديل بين البيئات (التطوير، الإنتاج، إلخ).",
+        "التحقق من سلامة الملفات عبر هاش SHA-256.",
+        "النسخ الاحتياطي التلقائي قبل أي تعديل.",
+        "التخزين المؤقت في الذاكرة لتحسين الأداء."
+      ]
+    },
+    "usage": {
+      "title": "الاستخدام",
+      "content": "لاستخدام EnvCrypt، قم فقط باستيراد المكتبة وتهيئتها كما هو موضح أدناه:",
+      "code": "from envcrypt import Env\n\nenv = Env(\"path/to/envfile\", encryption_method=\"AES\")\napi_key = env.get(\"API_KEY\")"
+    },
+    "installation": {
+      "title": "التثبيت",
+      "content": "لتثبيت EnvCrypt، استخدم الأمر التالي:",
+      "code": "pip install envcrypt"
+    },
+    "api": {
+      "title": "مرجع API",
+      "methods": {
+        "get": {
+          "title": "get(name)",
+          "description": "استرجاع قيمة المتغير البيئي المحدد.",
+          "code": "env.get(\"VARIABLE_NAME\")"
+        },
+        "pop": {
+          "title": "pop(name)",
+          "description": "إزالة المتغير البيئي المحدد وتحديث الملف.",
+          "code": "env.pop(\"VARIABLE_NAME\")"
+        },
+        "setdefault": {
+          "title": "setdefault(name, value)",
+          "description": "تعيين قيمة افتراضية للمتغير البيئي إذا لم يكن موجودًا، وتحديث الملف.",
+          "code": "env.setdefault(\"VARIABLE_NAME\", \"default_value\")"
+        },
+        "switch_environment": {
+          "title": "switch_environment(environment_name)",
+          "description": "تبديل البيئة الحالية إلى البيئة المحددة.",
+          "code": "env.switch_environment(\"development\")"
+        },
+        "verify_integrity": {
+          "title": "verify_integrity()",
+          "description": "التحقق من سلامة ملف البيئة باستخدام هاش SHA-256.",
+          "code": "env.verify_integrity()"
+        },
+        "list_env": {
+          "title": "list_env()",
+          "description": "عرض جميع المتغيرات البيئية في البيئة الحالية.",
+          "code": "x = env.list_env()\nprint(x)"
+        }
+      }
+    }
+  }
+}
