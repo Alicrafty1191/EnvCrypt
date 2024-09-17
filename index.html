@@ -286,8 +286,8 @@ env.list_env()
                 $('#api-verify-code').text('env.verify_integrity()');
                 $('#api-verify-code-ar').text('env.verify_integrity()');
                 
-                $('#api-list-code').text('env.list_env()');
-                $('#api-list-code-ar').text('env.list_env()');
+                $('#api-list-code').text('x = env.list_env()\nprint(x)');
+                $('#api-list-code-ar').text('x = env.list_env()\nprint(x)');
                 
                 $('#english-content').toggleClass('hidden', lang === 'ar');
                 $('#arabic-content').toggleClass('hidden', lang === 'en');
